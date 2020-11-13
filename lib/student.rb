@@ -51,7 +51,7 @@ class Student
   end
     #this is a class method that creates the students table. Use a heredoc to set a variable, `sql`, equal to the necessary SQL statement. Remember, the attributes of a student, `name`, `grade`, and `id`, should correspond to the column names you are creating in your students table. The `id` column should be the primary key. With your `sql` variable pointing to the correct SQL statement, you can execute that statement using the `#execute` method provided to us by the SQLite3-Ruby gem. Remember that this method is called on whatever object stores your connection to the database, in this case `DB[:conn]`.
     def self.create(name:, grade:)
-      student = student.new(name, grade)
+      student = Student.new(name, grade)
       student.save
       student
     end
