@@ -39,7 +39,7 @@ class Student
   #  with DB[:conn]
   end
 
-  def self.create
+  def self.create(name:, grade:)
     student = student.new(name, grade)
     student.save
     student
